@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main()
+{
+    FILE *pFile = fopen("input.txt", "r");
+
+    char buffer[1024];
+
+    if (pFile == NULL)
+    {
+        printf("File cannot be opened\n");
+        return 1;
+    }
+
+    while (fgets(buffer, sizeof(buffer), pFile) != NULL)
+    {
+        printf("%s", buffer);
+    }
+
+    fclose(pFile);
+
+    return 0;
+}
