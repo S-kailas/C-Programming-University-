@@ -4,7 +4,7 @@ int main()
 {
     FILE *pFile = fopen("input.txt", "r");
 
-    char buffer[1024];
+    char buffer[1024]={0};
 
     if (pFile == NULL)
     {
