@@ -11,7 +11,7 @@ void selectionsort(int arr[],int n)
 {
   for (int i=0;i<n;i++)
   {
-    int min_index=i;
+    int min_index=i;//assuming the first element as the minimum value
     //scanning the array from the right side of min element for finding the minimum element by comparing the current min element(only the min_element's index is noticed )
     for (int j=i+1; j<n; j++)
     {
@@ -36,7 +36,6 @@ int main()
   int arr[5]={5,2,20,0,1};
   int n=sizeof(arr)/sizeof(arr[0]);
   selectionsort(arr,n);
-
   for (int i=0;i<n;i++)
   {
     printf("%d ",arr[i]);

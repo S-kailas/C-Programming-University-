@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+void insertionsort(int arr[],int n)
+{
+  for (int i=1;i<n;i++)
+  {
+    int key=arr[i]; //key is the value of unsorted  
+    int j=i-1; //j is the index of the right most sorted value
+    
+    //Need to check if the sorted value is greater than key value
+
+    while (j>=0 && arr[j]>key)
+    {
+      arr[j+1]=arr[j]; //shifting the sorted value to a single step right
+      j=j-1; //For looping inside the sorted array from right to left,at the end of loop j will point to one index down to the actual index , thats why key is inserted at j+1 index
+    }
+    //inserting the key value
+    arr[j+1]=key;
+  }
+}
+
+int main()
+{
+  int arr[7]={3,1,42,5,2,0,1};
+  int n=sizeof(arr)/sizeof(arr[0]);
+
+  insertionsort(arr,n);
+
+  for (int i=0;i<n;i++)
+  {
+    printf("%d ",arr[i]);
+  }
+  printf("\n");
+  return 0;
+}

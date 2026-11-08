@@ -31,4 +31,3 @@ int main()
     printf("Element Found at index %d\n",response);
   }
 }
-
