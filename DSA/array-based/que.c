@@ -59,8 +59,30 @@ int main()
 
   enqueue(3);
   enqueue(4);
+  enqueue(23);
+  enqueue(12);
+  enqueue(12121);
+
+  display();
+  printf("\n");
+
+  dequeue();
+  display();
+  printf("\n");
+
+  dequeue();
   display();
   printf("\n");
   dequeue();
+dequeue();
+dequeue();
+dequeue();
+dequeue();
+dequeue();
+dequeue();
+dequeue();
+
+  enqueue(122);
+  enqueue(21121);
   display();
 }
